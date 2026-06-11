@@ -1,0 +1,61 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --sidebar-bg: #1e293b;
+  --card-bg: #1e293b;
+}
+
+body {
+  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-200;
+}
+
+.sidebar {
+  @apply bg-[var(--sidebar-bg)] border-r border-[var(--border-color)];
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-3 py-2 rounded-lg text-[var(--text-secondary)] hover:bg-primary-50 dark:hover:bg-primary-950 hover:text-primary-600 dark:hover:text-primary-400 transition-colors;
+}
+
+.sidebar-link.active {
+  @apply bg-primary-50 dark:bg-primary-950 text-primary-600 dark:text-primary-400 font-semibold;
+}
+
+.card {
+  @apply bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl p-6;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-[var(--border-color)] rounded-lg bg-[var(--bg-primary)] text-[var(--text-primary)] focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-colors;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700;
+}
+
+.btn-secondary {
+  @apply border border-[var(--border-color)] text-[var(--text-primary)] hover:bg-[var(--bg-secondary)];
+}

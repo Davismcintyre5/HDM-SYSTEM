@@ -1,0 +1,68 @@
+// config/env.js
+
+const dotenv = require('dotenv');
+const path = require('path');
+
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
+
+const env = {
+  PORT: process.env.PORT || 5000,
+  NODE_ENV: process.env.NODE_ENV || 'development',
+  APP_NAME: process.env.APP_NAME || 'HDM SC',
+  APP_NAME_SCHOOL: process.env.APP_NAME_SCHOOL || 'HDM Computer School',
+  APP_NAME_CYBER: process.env.APP_NAME_CYBER || 'HDM Cyber',
+
+  ADMIN_ACCESS_HASH: process.env.ADMIN_ACCESS_HASH,
+
+  SCHOOL_MONGODB_URI: process.env.SCHOOL_MONGODB_URI,
+  CYBER_MONGODB_URI: process.env.CYBER_MONGODB_URI,
+
+  SCHOOL_JWT_SECRET: process.env.SCHOOL_JWT_SECRET,
+  SCHOOL_JWT_EXPIRE: process.env.SCHOOL_JWT_EXPIRE || '7d',
+  SCHOOL_REFRESH_SECRET: process.env.SCHOOL_REFRESH_SECRET,
+  SCHOOL_REFRESH_EXPIRE: process.env.SCHOOL_REFRESH_EXPIRE || '30d',
+
+  SCHOOL_PORTAL_SECRET: process.env.SCHOOL_PORTAL_SECRET,
+  SCHOOL_PORTAL_EXPIRE: process.env.SCHOOL_PORTAL_EXPIRE || '7d',
+  SCHOOL_PORTAL_REFRESH_SECRET: process.env.SCHOOL_PORTAL_REFRESH_SECRET,
+  SCHOOL_PORTAL_REFRESH_EXPIRE: process.env.SCHOOL_PORTAL_REFRESH_EXPIRE || '30d',
+
+  CYBER_JWT_SECRET: process.env.CYBER_JWT_SECRET,
+  CYBER_JWT_EXPIRE: process.env.CYBER_JWT_EXPIRE || '7d',
+  CYBER_JWT_REFRESH_SECRET: process.env.CYBER_JWT_REFRESH_SECRET,
+  CYBER_JWT_REFRESH_EXPIRE: process.env.CYBER_JWT_REFRESH_EXPIRE || '30d',
+
+  CYBER_ADMIN_SECRET: process.env.CYBER_ADMIN_SECRET,
+  CYBER_ADMIN_EXPIRE: process.env.CYBER_ADMIN_EXPIRE || '7d',
+  CYBER_ADMIN_REFRESH_SECRET: process.env.CYBER_ADMIN_REFRESH_SECRET,
+  CYBER_ADMIN_REFRESH_EXPIRE: process.env.CYBER_ADMIN_REFRESH_EXPIRE || '30d',
+
+  BASE_URL: process.env.BASE_URL || 'http://localhost:5000',
+  SCHOOL_URL: process.env.SCHOOL_URL || 'http://localhost:3000',
+  CYBER_URL: process.env.CYBER_URL || 'http://localhost:3001',
+
+  CORS_ORIGINS: process.env.CORS_ORIGINS || 'http://localhost:3000,http://localhost:3001',
+
+  HDM_SCHOOL_API_KEY: process.env.HDM_SCHOOL_API_KEY,
+  HDM_SCHOOL_FROM_EMAIL: process.env.HDM_SCHOOL_FROM_EMAIL,
+  HDM_SCHOOL_FROM_NAME: process.env.HDM_SCHOOL_FROM_NAME,
+
+  HDM_CYBER_API_KEY: process.env.HDM_CYBER_API_KEY,
+  HDM_CYBER_FROM_EMAIL: process.env.HDM_CYBER_FROM_EMAIL,
+  HDM_CYBER_FROM_NAME: process.env.HDM_CYBER_FROM_NAME,
+
+  HDM_API_URL: process.env.HDM_API_URL,
+
+  CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+  CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+
+  MPESA_CONSUMER_KEY: process.env.MPESA_CONSUMER_KEY,
+  MPESA_CONSUMER_SECRET: process.env.MPESA_CONSUMER_SECRET,
+  MPESA_PASSKEY: process.env.MPESA_PASSKEY,
+  MPESA_SHORTCODE: process.env.MPESA_SHORTCODE,
+  MPESA_ENVIRONMENT: process.env.MPESA_ENVIRONMENT || 'sandbox',
+  MPESA_CALLBACK_BASE_URL: process.env.MPESA_CALLBACK_BASE_URL,
+};
+
+module.exports = { env };

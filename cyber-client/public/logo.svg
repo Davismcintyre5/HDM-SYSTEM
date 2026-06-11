@@ -1,0 +1,8 @@
+<!-- public/logo.svg -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#2563eb"/>
+  <path d="M25 65V35L40 25L55 35V50H45V42L40 39L35 42V58L40 61L45 58V55H55V65L40 75L25 65Z" fill="#ffffff"/>
+  <circle cx="50" cy="50" r="12" fill="#ffffff" opacity="0.3"/>
+  <circle cx="50" cy="50" r="6" fill="#1e40af"/>
+</svg>
